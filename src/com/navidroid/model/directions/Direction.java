@@ -7,7 +7,7 @@ import com.navidroid.model.util.StringUtil;
 
 public class Direction {
 	
-	private List<LatLng> path;
+	private List<LatLng> path;		//存經緯度的list
 	private int timeSeconds;
 	private int distanceMeters;
 	private String description;
@@ -17,6 +17,7 @@ public class Direction {
 	private String target;
 	private Movement movement;
 
+	//1.建構子
 	public Direction(List<LatLng> path, int timeSeconds, int distanceMeters, String description, String current, String target) {
 		this.path = path;
 		this.timeSeconds = timeSeconds;
@@ -25,12 +26,15 @@ public class Direction {
 		this.current = current;
 		this.target = target;
 	}
-	
+	//2.建構子(增加Movement-執行setMovement)
 	public Direction(List<LatLng> path, int timeSeconds, int distanceMeters, String description, String current, String target, Movement movement) {
 		this(path, timeSeconds, distanceMeters, description, current, target);
 		setMovement(movement);
 	}
 	
+	/*===============================*/
+	/*       取此物件的Member        */
+	/*===============================*/
 	public List<LatLng> getPath() {
 		return path;
 	}
