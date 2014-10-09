@@ -31,6 +31,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+實作ConnectionCallbacks
+	-onConnected
+	-onDisconnected
+實作OnConnectionFailedListener
+	-onConnectionFailed
+*/
 public class NavigationFragment extends Fragment implements
 	ConnectionCallbacks,
 	OnConnectionFailedListener  {
